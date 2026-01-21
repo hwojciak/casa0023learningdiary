@@ -4,69 +4,79 @@
     "href": "index.html",
     "title": "Learning Diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "About\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "About"
     ]
   },
   {
     "objectID": "week1.html",
     "href": "week1.html",
-    "title": "Week 1",
+    "title": "1  Week 1",
     "section": "",
-    "text": "Summary",
+    "text": "1.1 Summary",
     "crumbs": [
-      "Week 1"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1</span>"
     ]
   },
   {
     "objectID": "week1.html#applications",
     "href": "week1.html#applications",
-    "title": "Week 1",
-    "section": "Applications",
-    "text": "Applications",
+    "title": "1  Week 1",
+    "section": "1.2 Applications",
+    "text": "1.2 Applications",
     "crumbs": [
-      "Week 1"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1</span>"
     ]
   },
   {
     "objectID": "week1.html#reflections",
     "href": "week1.html#reflections",
-    "title": "Week 1",
-    "section": "Reflections",
-    "text": "Reflections",
+    "title": "1  Week 1",
+    "section": "1.3 Reflections",
+    "text": "1.3 Reflections",
     "crumbs": [
-      "Week 1"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "2  Week 1",
+    "section": "",
+    "text": "2.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html#applications",
+    "href": "week2.html#applications",
+    "title": "2  Week 1",
+    "section": "2.2 Applications",
+    "text": "2.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html#reflections",
+    "href": "week2.html#reflections",
+    "title": "2  Week 1",
+    "section": "2.3 Reflections",
+    "text": "2.3 Reflections",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 1</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
     ]
   }
 ]
