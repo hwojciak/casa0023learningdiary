@@ -50,43 +50,43 @@
     ]
   },
   {
-    "objectID": "week2.html",
-    "href": "week2.html",
-    "title": "2  Week 2",
+    "objectID": "week3.html",
+    "href": "week3.html",
+    "title": "3  Week 3",
     "section": "",
-    "text": "2.1 Summary",
+    "text": "3.1 Summary",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
     ]
   },
   {
-    "objectID": "week2.html#applications",
-    "href": "week2.html#applications",
-    "title": "2  Week 2",
-    "section": "2.2 Applications",
-    "text": "2.2 Applications",
+    "objectID": "week3.html#applications",
+    "href": "week3.html#applications",
+    "title": "3  Week 3",
+    "section": "3.2 Applications",
+    "text": "3.2 Applications",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
     ]
   },
   {
-    "objectID": "week2.html#reflections",
-    "href": "week2.html#reflections",
-    "title": "2  Week 2",
-    "section": "2.3 Reflections",
-    "text": "2.3 Reflections",
+    "objectID": "week3.html#reflections",
+    "href": "week3.html#reflections",
+    "title": "3  Week 3",
+    "section": "3.3 Reflections",
+    "text": "3.3 Reflections",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 2</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "3  Summary",
+    "title": "4  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
     ]
   }
 ]
