@@ -2,3 +2,11 @@
 title: "Week 2"
 ---
 
+Here are the slides for Week 2:
+
+```{r}
+xaringanExtra::embed_xaringan(
+  url = "https://hwojciak.github.io/casa0023xaringanweek2/index.html",
+  ratio = "16:9"
+)
+```

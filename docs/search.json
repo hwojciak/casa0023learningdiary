@@ -50,6 +50,16 @@
     ]
   },
   {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "2  Week 2",
+    "section": "",
+    "text": "Here are the slides for Week 2:\n\nxaringanExtra::embed_xaringan(\n  url = \"https://hwojciak.github.io/casa0023xaringanweek2/index.html\",\n  ratio = \"16:9\"\n)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 2</span>"
+    ]
+  },
+  {
     "objectID": "week3.html",
     "href": "week3.html",
     "title": "3  Week 3",
