@@ -19,7 +19,7 @@ bibliography: references.bib
 format:
   html:
     theme:
-      - litera
+      - slate
       - brand
     css: styles.css
   pdf:

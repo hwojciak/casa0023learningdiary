@@ -20,3 +20,100 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Tilt Warp', cursive;
 }
 
+/* ===== Global dark theme ===== */
+
+body {
+  background-color: #121212;
+  color: #e6e6e6;
+}
+
+.page-columns,
+.content,
+main {
+  background-color: #121212;
+}
+
+/* ===== Text colors ===== */
+
+h1, h2, h3, h4, h5, h6,
+.chapter-title,
+.quarto-title-block .title,
+.quarto-title-block .subtitle {
+  color: #f0f0f0;
+}
+
+a {
+  color: #9ecbff;
+}
+
+a:hover {
+  color: #cfe4ff;
+}
+
+hr {
+  border-color: #333333;
+}
+
+figure figcaption {
+  color: #cccccc;
+}
+
+/* ===== Code & block elements ===== */
+
+pre, code {
+  background-color: #1e1e1e;
+  color: #e6e6e6;
+}
+
+blockquote {
+  color: #dddddd;
+  border-left: 4px solid #444444;
+}
+
+/* ===== Book sidebar ===== */
+
+.sidebar,
+#quarto-sidebar,
+.quarto-sidebar {
+  background-color: #121212 !important;
+  color: #e6e6e6;
+}
+
+.quarto-sidebar a {
+  color: #cccccc;
+}
+
+.quarto-sidebar a:hover {
+  color: #ffffff;
+}
+
+.quarto-sidebar .active > a,
+.quarto-sidebar .active > a:hover {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+}
+
+.quarto-sidebar hr {
+  border-color: #333333;
+}
+
+/* ===== In-page TOC ===== */
+
+#TOC,
+.quarto-toc {
+  background-color: #121212;
+}
+
+.quarto-toc a {
+  color: #bbbbbb;
+}
+
+.quarto-toc a:hover {
+  color: #ffffff;
+}
+
+.quarto-toc .active > a {
+  color: #9ecbff;
+  border-left: 2px solid #9ecbff;
+}
+

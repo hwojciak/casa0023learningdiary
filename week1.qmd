@@ -4,9 +4,10 @@ title: "Week 1"
 
 ## Summary
 
-::: {#fig-week1-setup fig-cap="The difference between passive and active remote sensors."}
-![](images/remote_sensing_type_viz.png)
+::: {#fig-week1-setup fig-cap="Earth observation basics."}
+![](images/earth_observation_viz.png)
 :::
+
 
 ## Applications
 
