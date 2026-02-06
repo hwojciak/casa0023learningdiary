@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-fb38826c94df9fed5d44fa9177c76c43.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -185,9 +188,79 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<div id="fig-comparison" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/ndvi_london_black.png" class="lightbox" data-gallery="cities" title="London NDVI Index Map"><img src="images/ndvi_london_black.png" class="img-fluid figure-img"></a></p>
+<figcaption>London NDVI Index Map</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/ndvi_warsaw_black.png" class="lightbox" data-gallery="cities" title="Warsaw NDVI Index Map"><img src="images/ndvi_warsaw_black.png" class="img-fluid figure-img"></a></p>
+<figcaption>Warsaw NDVI Index Map</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Side-by-side spatial analysis of vegetation index. Click either image to expand and compare scales.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="applications" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
+<div id="tbl-ndvi" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ndvi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: NDVI Comparison: Warsaw vs.&nbsp;London
+</figcaption>
+<div aria-describedby="tbl-ndvi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">City</th>
+<th style="text-align: left;">Max NDVI</th>
+<th style="text-align: left;">Mean NDVI (Veg)</th>
+<th style="text-align: left;">Veg Cover %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Warsaw</td>
+<td style="text-align: left;">0.585</td>
+<td style="text-align: left;">0.302</td>
+<td style="text-align: left;">66.47%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">London</td>
+<td style="text-align: left;">0.974</td>
+<td style="text-align: left;">0.309</td>
+<td style="text-align: left;">50.31%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-week1-setup" class="quarto-float quarto-figure quarto-figure-center anchored" style="display: block; margin: 0 auto; width: 80%;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-week1-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/londonvswarsaw.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3.2: Size comparison London vs Warsaw"><img src="images/londonvswarsaw.png" class="img-fluid figure-img" style="display: block; margin: 0 auto; width: 80%;"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-week1-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Size comparison London vs Warsaw
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="reflections" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">3.3</span> Reflections</h2>
@@ -609,6 +682,38 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

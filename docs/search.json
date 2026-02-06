@@ -70,11 +70,21 @@
     ]
   },
   {
+    "objectID": "week3.html#summary",
+    "href": "week3.html#summary",
+    "title": "3  Week 3",
+    "section": "",
+    "text": "London NDVI Index Map\n\n\n\n\n\n\n\nWarsaw NDVI Index Map\n\n\n\n\n\n\nFigure 3.1: Side-by-side spatial analysis of vegetation index. Click either image to expand and compare scales.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
+    ]
+  },
+  {
     "objectID": "week3.html#applications",
     "href": "week3.html#applications",
     "title": "3  Week 3",
     "section": "3.2 Applications",
-    "text": "3.2 Applications",
+    "text": "3.2 Applications\n\n\n\nTable 3.1: NDVI Comparison: Warsaw vs. London\n\n\n\n\n\nCity\nMax NDVI\nMean NDVI (Veg)\nVeg Cover %\n\n\n\n\nWarsaw\n0.585\n0.302\n66.47%\n\n\nLondon\n0.974\n0.309\n50.31%\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.2: Size comparison London vs Warsaw",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
     ]
