@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Learning Diary",
     "section": "",
-    "text": "About\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "About\nHi, welcome to my Learning Diary for Remotely Sensing City and Environments module! This module is part of the Bartlett Centre for Advanced Spatial Analysis (CASA), University College London (UCL) master’s level course in Urban Spatial Science.\nMy name is Hania and I am currently being train to become urban spatial scientist, but my background is in physics and arts. I am passionate about data visualisation and experimenting with different ways to communicate spatial analysis topics to broader audience.\nEnjoy earth observation insights, remote sensing techniques and some infographics!",
     "crumbs": [
       "About"
     ]
@@ -62,51 +62,71 @@
   {
     "objectID": "week3.html",
     "href": "week3.html",
-    "title": "3  Week 3",
+    "title": "3  Remote Sensing Corrections",
     "section": "",
-    "text": "3.1 Summary",
+    "text": "3.1 Filtering, texture analysis and Principal Component Analysis (PCA)\nWhen dealing with satellite data, in most cases, we will deal with pre-processed imagery, which is ready to analyse. There is number of remote sensing data corrections and in this section I would like to introduce few of them, with a main focus on specific ratio index - Normalised Difference Vegetation Index (NDVI).\nBefore focusing on NDVI, I explored several image processing techniques introduced in the practical, including filtering, texture analysis and Principal Component Analysis (PCA). Visually, this did not necessarily “improve” the image, but it reduces small-scale pixel noise and stabilises local variation. This is particularly relevant when performing further statistical operations (e.g. texture or PCA), as these methods can otherwise be overly sensitive to abrupt pixel-to-pixel differences that may reflect sensor noise rather than real landscape structure. I then calculated GLCM texture (homogeneity) using a 7×7 window. Unlike spectral bands, texture does not measure reflectance but rather the spatial arrangement of pixel values. High homogeneity indicates uniform surfaces (e.g. large vegetated patches or water bodies), while lower values suggest more heterogeneous urban fabric. However, texture outputs are less intuitive to interpret visually and highly dependent on chosen parameters (window size and grey level quantisation). Finally, PCA was applied to the stacked spectral and texture layers to reduce redundancy between correlated bands. PCA transforms the data into new components (PC1, PC2, etc.) that capture decreasing proportions of overall variance. While PCA can be useful for dimensionality reduction and classification, the resulting components are abstract combinations of original variables and therefore less directly interpretable than NDVI. Overall, these steps demonstrated how preprocessing choices influence both visual outputs and statistical stability, even if their interpretability is less straightforward than vegetation indices.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Corrections</span>"
     ]
   },
   {
-    "objectID": "week3.html#summary",
-    "href": "week3.html#summary",
-    "title": "3  Week 3",
-    "section": "",
-    "text": "London NDVI Index Map\n\n\n\n\n\n\n\nWarsaw NDVI Index Map\n\n\n\n\n\n\nFigure 3.1: Side-by-side spatial analysis of vegetation index. Click either image to expand and compare scales.",
+    "objectID": "week3.html#the-normalised-different-vegetation-index-ndvi",
+    "href": "week3.html#the-normalised-different-vegetation-index-ndvi",
+    "title": "3  Remote Sensing Corrections",
+    "section": "3.2 The Normalised Different Vegetation Index (NDVI)",
+    "text": "3.2 The Normalised Different Vegetation Index (NDVI)\n\n\n\n\n\n\n\n\nLondon NDVI Map\n\n\n\n\n\n\n\nWarsaw NDVI Map\n\n\n\n\n\n\nFigure 3.1: Side-by-side spatial analysis of vegetation index. Click either image to expand and compare scales.\n\n\n\nMy initial spin on practical content came from genuine interest in comparison of green coverage between London and Warsaw. I started off with purely looking at the visualisation of NDVI for both cities wondering if there are significant differences visible to the naked eye. For both cities I used imagery from May 2024, to minimise differences which might be caused by seasonal variations. The minimum of NDVI value was chosen based on fact that for urban areas NDVI &gt; 0.2 is considered to be threshold for “some” vegetation. Maximum NDVI was set to be 0.6, as for London NDVI &gt; 0.6 is less than 0.001% of the city area, and for Warsaw max NDVI value is 0.58.\nAlthough some differences are visible, visualisations weren’t very informative. I decided to run very basic descriptive statistics (see Table 3.1), which revealed a bit more about cities greenery. Warsaw had a slightly higher percentage of vegetation cover, while London seems to have higher value for max NDVI (as well as slightly higher mean NDVI) indicating spots of more lush greenery in the city. The vegetation cover of 66% and 64% seemed like very high values, and after cross-checking with literature it turned to be way off. According to Mayor of London website London green cover is around 51.7%, while Husqvarna Urban Green Space Insights (HUGSI) website shows that London green space is 41%, and Warsaw 50%.\nThis variations might be partially due to differences in definitions of green space (maybe different thresholds or not accounting for private gardens or green roofs) , but mostly due to simplicity of the method I used. Firstly Landsat 8 data has resolution of 30 m, while Sentinel 2 (used in HUGSI analysis) has a resolution of 10-20 m. When using Landsat 8 data we are analysing 900 m² pixels, which can lead to eg. having very small, but very healthy green backyard which can push an average NDVI pixel value to be &gt; 0.2, and therefore count the whole pixel as a vegetation.\n\n\n\nTable 3.1: NDVI Comparison: Warsaw vs. London\n\n\n\n\n\nCity\nMax NDVI\nMean NDVI (Veg)\nVeg Cover %\n\n\n\n\nWarsaw\n0.585\n0.302\n66.47%\n\n\nLondon\n0.721\n0.346\n64.11%",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
-    ]
-  },
-  {
-    "objectID": "week3.html#applications",
-    "href": "week3.html#applications",
-    "title": "3  Week 3",
-    "section": "3.2 Applications",
-    "text": "3.2 Applications\n\n\n\nTable 3.1: NDVI Comparison: Warsaw vs. London\n\n\n\n\n\nCity\nMax NDVI\nMean NDVI (Veg)\nVeg Cover %\n\n\n\n\nWarsaw\n0.585\n0.302\n66.47%\n\n\nLondon\n0.974\n0.309\n50.31%\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.2: Size comparison London vs Warsaw",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Corrections</span>"
     ]
   },
   {
     "objectID": "week3.html#reflections",
     "href": "week3.html#reflections",
-    "title": "3  Week 3",
+    "title": "3  Remote Sensing Corrections",
     "section": "3.3 Reflections",
     "text": "3.3 Reflections",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 3</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week4_5.html",
+    "href": "week4_5.html",
+    "title": "4  Week 4 and 5",
+    "section": "",
+    "text": "4.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 4 and 5</span>"
+    ]
+  },
+  {
+    "objectID": "week4_5.html#applications",
+    "href": "week4_5.html#applications",
+    "title": "4  Week 4 and 5",
+    "section": "4.2 Applications",
+    "text": "4.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 4 and 5</span>"
+    ]
+  },
+  {
+    "objectID": "week4_5.html#reflections",
+    "href": "week4_5.html#reflections",
+    "title": "4  Week 4 and 5",
+    "section": "4.3 Reflections",
+    "text": "4.3 Reflections",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Week 4 and 5</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "4  Summary",
+    "title": "5  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Summary</span>"
     ]
   }
 ]

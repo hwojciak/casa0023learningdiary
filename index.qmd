@@ -1,9 +1,8 @@
 # About {.unnumbered}
 
-This is a Quarto book.
+Hi, welcome to my Learning Diary for Remotely Sensing City and Environments module!
+This module is part of the Bartlett Centre for Advanced Spatial Analysis (CASA), University College London (UCL) master's level course in Urban Spatial Science. 
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+My name is Hania and I am currently being train to become urban spatial scientist, but my background is in physics and arts. I am passionate about data visualisation and experimenting with different ways to communicate spatial analysis topics to broader audience.
 
-```{r}
-1 + 1
-```
+Enjoy earth observation insights, remote sensing techniques and some infographics! 
