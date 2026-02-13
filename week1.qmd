@@ -1,5 +1,5 @@
 ---
-title: "Week 1"
+title: "Introduction to Remote Sensing"
 format:
   html:
     lightbox: true
