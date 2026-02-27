@@ -1,11 +1,16 @@
 ---
-title: "Week 4 and 5"
+title: "RS in Policies- Case Study"
 format:
   html:
     lightbox: true
 ---
 
-## Summary
+## Making Cities Resilient (MCR) 2030 
+
+### Wroclaw as a Resilience Hub 
+
+As a case study I decided to choose my hometown- Wroclaw. It’s 4 largest city in Poland, located at southwestern part of the country, on the Odra (Oder) river. It’s location makes it prone to the flooding, and city has experience few of them especially in past 50 years. One of the biggest disasters happened in 1997, when Oder and Morava rivers caused flooding in Central Europe. After 1997 flood Wroclaw’s authorities focused on city’s resilience and Wroclaw has become MCR Resilience Hub in 2022. 
+
 
 ## Applications
 
