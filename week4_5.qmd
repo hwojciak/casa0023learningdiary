@@ -18,7 +18,7 @@ As a case study I decided to choose my hometown- Wroclaw. It’s 4 largest city 
 :::
 I started thinking maybe there is no much space for suggestions how to use earth observation in supporting MCR2030-Wroclaw seems to be greener and more resilient to flooding. However, resilience does not stop at administrative borders, and a city’s safety is often dictated by the land-use choices of its immediate neighbours.
 
-## Resilient infrastructure in suburban areas
+## Resilient Infrastructure in Suburban Areas
 
 While Wroclaw strengthens its internal defenses, the rapid expansion of the surrounding functional urban area presents a new set of vulnerabilities. What about suburban areas which don’t fall under the boundaries of cities? In polish administrative system they are separate entities, with their own mayors, but often falls into bigger agglomeration (like in case of Wroclaw). Being in an agglomeration would mean some degree of collaboration between city president (in Poland cities has presidents, and municipalities has mayors) and mayors of surrounding municipalities, but there is no rigours rules regarding the urban development of city vs its suburban areas. This leads to the situations like Wroclaw case where there are years of efforts to re-green city, making it more resilient, but just outside its boundaries there is rapid urban sprawl happening, with developments built on potential flood zones and intense “soil sealing” with no supporting drainage systems. My suggestion would be not only regarding the use of RS in urban planning but also to create a stronger administrative body responsible of more sustainable (and probably more controlled) development of suburban areas.
 
