@@ -1,0 +1,6 @@
+---
+title: "Classification"
+format:
+  html:
+    lightbox: true
+---

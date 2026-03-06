@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./week6.html" rel="next">
 <link href="./week3.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-fb38826c94df9fed5d44fa9177c76c43.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -141,8 +144,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to Google Earth Engine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -161,12 +176,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#making-cities-resilient-mcr-2030" id="toc-making-cities-resilient-mcr-2030" class="nav-link active" data-scroll-target="#making-cities-resilient-mcr-2030"><span class="header-section-number">4.1</span> Making Cities Resilient (MCR) 2030</a>
+  <li><a href="#making-cities-resilient-2030-mcr2030" id="toc-making-cities-resilient-2030-mcr2030" class="nav-link active" data-scroll-target="#making-cities-resilient-2030-mcr2030"><span class="header-section-number">4.1</span> Making Cities Resilient 2030 (MCR2030)</a>
   <ul class="collapse">
   <li><a href="#wroclaw-as-a-resilience-hub" id="toc-wroclaw-as-a-resilience-hub" class="nav-link" data-scroll-target="#wroclaw-as-a-resilience-hub"><span class="header-section-number">4.1.1</span> Wroclaw as a Resilience Hub</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">4.2</span> Applications</a></li>
-  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">4.3</span> Reflections</a></li>
+  <li><a href="#resilient-infrastructure-in-suburban-areas" id="toc-resilient-infrastructure-in-suburban-areas" class="nav-link" data-scroll-target="#resilient-infrastructure-in-suburban-areas"><span class="header-section-number">4.2</span> Resilient infrastructure in suburban areas</a></li>
+  <li><a href="#proposed-improvement-the-agglomeration-resilience-authority" id="toc-proposed-improvement-the-agglomeration-resilience-authority" class="nav-link" data-scroll-target="#proposed-improvement-the-agglomeration-resilience-authority"><span class="header-section-number">4.3</span> Proposed Improvement: The Agglomeration Resilience Authority</a></li>
+  <li><a href="#conclusion-data-driven-solidarity" id="toc-conclusion-data-driven-solidarity" class="nav-link" data-scroll-target="#conclusion-data-driven-solidarity"><span class="header-section-number">4.4</span> Conclusion: Data-Driven Solidarity</a></li>
   </ul>
 </nav>
     </div>
@@ -192,18 +208,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="making-cities-resilient-mcr-2030" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="making-cities-resilient-mcr-2030"><span class="header-section-number">4.1</span> Making Cities Resilient (MCR) 2030</h2>
+<section id="making-cities-resilient-2030-mcr2030" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="making-cities-resilient-2030-mcr2030"><span class="header-section-number">4.1</span> Making Cities Resilient 2030 (MCR2030)</h2>
+<p>MCR 2030 is an initiative which aims to strengthen local resilience of the cities around the world. It was launched by United Nations Office for Disaster Risk Reduction (UNDRR) in collaboration with partners like Global Resilient Cities Network, ICLEI, C40 Cities Climate Leadership and many others (for full list please see <a href="https://mcr2030.undrr.org/sites/default/files/2021-04/MCR2030%20in%20English%20ver.2%20%2820210302%29.pdf?startDownload=true">this document</a>), after a success of 10-year (2010-2020) campaign “Making Cities Resilient”. Key goals of this partnership is to help cities transition from raising awareness on local resilience to actually implementing risk-reduction and resilient infrastructure. It helps cities align with Sendai Framework for Disaster Risk Reduction, the Paris Agreement, and the Sustainable Development Goals (specifically SDG11).</p>
 <section id="wroclaw-as-a-resilience-hub" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="wroclaw-as-a-resilience-hub"><span class="header-section-number">4.1.1</span> Wroclaw as a Resilience Hub</h3>
-<p>As a case study I decided to choose my hometown- Wroclaw. It’s 4 largest city in Poland, located at southwestern part of the country, on the Odra (Oder) river. It’s location makes it prone to the flooding, and city has experience few of them especially in past 50 years. One of the biggest disasters happened in 1997, when Oder and Morava rivers caused flooding in Central Europe. After 1997 flood Wroclaw’s authorities focused on city’s resilience and Wroclaw has become MCR Resilience Hub in 2022.</p>
+<p>As a case study I decided to choose my hometown- Wroclaw. It’s 4 largest city in Poland, located at southwestern part of the country, on the Odra (Oder) river. It’s location makes it prone to the flooding, and city has experience few of them especially in past 50 years. One of the biggest disasters happened in 1997, when Oder and Morava rivers caused flooding in Central Europe. After 1997 flood Wroclaw’s authorities focused on city’s risk-reduction and Wroclaw has become MCR Resilience Hub in 2022, leading an example of resilient infrastructure development. While preparing material for this entry I realised that, because Wroclaw has a solid experience in improving its infrastructure, it’s local authorities are already using remote sensing and spatial analysis in implementing those changes. In case of flooding there is also a well-functioning system in place - Copernicus Emergency Management Service (CEMS), which provides on demand mapping in case of natural hazards.</p>
+<div id="fig-week4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-week4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/copernicus_flood_pl.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;4.1: On Demand Mapping on CEMS website- case of floods in South West Poland in 2024."><img src="images/copernicus_flood_pl.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-week4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: On Demand Mapping on CEMS website- case of floods in South West Poland in 2024.
+</figcaption>
+</figure>
+</div>
+<p>I started thinking maybe there is no much space for suggestions how to use earth observation in supporting MCR2030-Wroclaw seems to be greener and more resilient to flooding. However, resilience does not stop at administrative borders, and a city’s safety is often dictated by the land-use choices of its immediate neighbours.</p>
 </section>
 </section>
-<section id="applications" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">4.2</span> Applications</h2>
+<section id="resilient-infrastructure-in-suburban-areas" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="resilient-infrastructure-in-suburban-areas"><span class="header-section-number">4.2</span> Resilient infrastructure in suburban areas</h2>
+<p>While Wroclaw strengthens its internal defenses, the rapid expansion of the surrounding functional urban area presents a new set of vulnerabilities. What about suburban areas which don’t fall under the boundaries of cities? In polish administrative system they are separate entities, with their own mayors, but often falls into bigger agglomeration (like in case of Wroclaw). Being in an agglomeration would mean some degree of collaboration between city president (in Poland cities has presidents, and municipalities has mayors) and mayors of surrounding municipalities, but there is no rigours rules regarding the urban development of city vs its suburban areas. This leads to the situations like Wroclaw case where there are years of efforts to re-green city, making it more resilient, but just outside its boundaries there is rapid urban sprawl happening, with developments built on potential flood zones and intense “soil sealing” with no supporting drainage systems. My suggestion would be not only regarding the use of RS in urban planning but also to create a stronger administrative body responsible of more sustainable (and probably more controlled) development of suburban areas.</p>
 </section>
-<section id="reflections" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">4.3</span> Reflections</h2>
+<section id="proposed-improvement-the-agglomeration-resilience-authority" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="proposed-improvement-the-agglomeration-resilience-authority"><span class="header-section-number">4.3</span> Proposed Improvement: The Agglomeration Resilience Authority</h2>
+<p>To address the disconnect between city planning and suburban sprawl, I suggest the establishment of an Agglomeration Resilience Authority. This would serve as a supra-municipal governing body empowered to oversee land-use permits across the entire metropolitan region. Its primary role would be to ensure that local suburban developments do not compromise regional flood safety or ecological health. By using Remote Sensing (RS) as its primary evidence-based tool, this authority could make informed, objective decisions in the following ways:</p>
+<ul>
+<li><p>Standardizing “Soil Sealing” Limits: By using High-Resolution Multispectral Imagery (e.g., Sentinel-2) to calculate the Normalized Difference Built-up Index (NDBI), the authority can set strict “permeability quotas.” This prevents excessive concrete cover in the suburbs from increasing runoff and overwhelming Wroclaw’s drainage systems.</p></li>
+<li><p>Dynamic Flood Risk Mapping: Utilizing LiDAR-derived Digital Elevation Models (DEMs) allows for the identification of natural drainage corridors and micro-depressions. The authority can use this data to veto “high-risk” developments in areas that RS identifies as natural water retention zones, even if they aren’t marked on outdated traditional maps.</p></li>
+<li><p>Monitoring Trans-boundary Green Belts: Using the Normalized Difference Vegetation Index (NDVI), the body can ensure that “Green Lungs” remain continuous across administrative borders. RS allows for real-time tracking of whether suburban encroachment is fragmenting the forests and wetlands that the entire agglomeration relies on for cooling and water absorption.</p></li>
+</ul>
+</section>
+<section id="conclusion-data-driven-solidarity" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="conclusion-data-driven-solidarity"><span class="header-section-number">4.4</span> Conclusion: Data-Driven Solidarity</h2>
+<p>By integrating Remote Sensing into a unified administrative framework, we move from “isolated resilience” to “territorial resilience.” This approach directly supports the MCR2030 goal of transitioning from awareness to implementation by ensuring urban growth is monitored through the lens of environmental physics rather than political boundaries. For Wroclaw to remain a true Resilience Hub, it must look beyond its city signs and use Earth Observation to lead its entire metropolitan region toward a safer, more porous future. This data-driven solidarity ensures that a win for one municipality is not a disaster for its neighbour.</p>
 
 
 </section>
@@ -616,12 +655,44 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week6.html" class="pagination-link" aria-label="Introduction to Google Earth Engine">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
