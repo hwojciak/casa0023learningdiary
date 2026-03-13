@@ -140,6 +140,36 @@
     ]
   },
   {
+    "objectID": "week6.html",
+    "href": "week6.html",
+    "title": "5  Introduction to Google Earth Engine",
+    "section": "",
+    "text": "5.1 What is Google Earth Engine (GEE)?\nThis week focuses on Google Earth Engine (GEE), a cloud-based platform designed for planetary-scale geospatial analysis. GEE represented a fundamental shift in our ability to monitor the Earth, and ten years later, we are exploring whether it lived up to the hype. In the following sections we will first set some background information what GEE is and what datasets we can find there, to later evaluate its real-world impact on the industry.\nBecause I’m completely new to GEE I would like to start with writing up some basic information about it. GEE is cloud-based platform which provides massive amount of geo-spatial data, with planetary-scale analysis tools. The main components of GEE, which makes it (in theory) so impactful are:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction to Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#what-is-google-earth-engine-gee",
+    "href": "week6.html#what-is-google-earth-engine-gee",
+    "title": "5  Introduction to Google Earth Engine",
+    "section": "",
+    "text": "The Public Data Archive: GEE contains ready-to-use 40 years historical and current data from sensors such as Sentinel, MODIS, or Landsat.\nThe Computational Infrastructure: it runs on Google servers, uses data stored in cloud (no downloading needed) which effects in extremely fast and efficient data analysis (unlike traditional GIS).\nThe APIs: users can interact with platform using JavaScript or Python scripts. No configuring hardware or managing backend infrastructure.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction to Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#gee-in-real-world",
+    "href": "week6.html#gee-in-real-world",
+    "title": "5  Introduction to Google Earth Engine",
+    "section": "5.2 GEE in real world",
+    "text": "5.2 GEE in real world\nSo how is GEE actually used in real world? To help answer I looked into two papers Tamiminia et al. (2020) and Martinez-Arboleda, Morales-Hernandez, and Ordoñez-Galindo (2023)\n\n\n\n\nMartinez-Arboleda, Joan Sebastian, Mario Morales-Hernandez, and Adriana Ordoñez-Galindo. 2023. “A Systematic Review of Remote Sensing and Geographic Information Systems Based Techniques for Monitoring and Assessing the Impact of Urban Green Spaces on Urban Heat Island.” Remote Sensing Applications: Society and Environment 29: 100897. https://doi.org/10.1016/j.rsase.2022.100897.\n\n\nTamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Ladan Beani, Brian Postrick, Brian Giammanco, and Brian Brisco. 2020. “Google Earth Engine for Geo-Big Data Applications: A Meta-Analysis and Systematic Review.” ISPRS Journal of Photogrammetry and Remote Sensing 164: 152–70. https://doi.org/10.1016/j.isprsjprs.2020.04.001.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction to Google Earth Engine</span>"
+    ]
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
     "title": "7  Summary",
@@ -147,6 +177,16 @@
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Martinez-Arboleda, Joan Sebastian, Mario Morales-Hernandez, and Adriana\nOrdoñez-Galindo. 2023. “A Systematic Review of Remote\nSensing and Geographic\nInformation Systems Based Techniques for\nMonitoring and Assessing the Impact of Urban Green Spaces on Urban Heat\nIsland.” Remote Sensing Applications: Society and\nEnvironment 29: 100897. https://doi.org/10.1016/j.rsase.2022.100897.\n\n\nTamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Ladan Beani, Brian\nPostrick, Brian Giammanco, and Brian Brisco. 2020. “Google\nEarth Engine for Geo-Big Data Applications:\nA Meta-Analysis and Systematic Review.” ISPRS\nJournal of Photogrammetry and Remote Sensing 164: 152–70. https://doi.org/10.1016/j.isprsjprs.2020.04.001.",
+    "crumbs": [
+      "References"
     ]
   }
 ]

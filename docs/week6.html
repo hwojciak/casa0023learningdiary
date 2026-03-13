@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -168,8 +188,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-google-earth-engine-gee" id="toc-what-is-google-earth-engine-gee" class="nav-link active" data-scroll-target="#what-is-google-earth-engine-gee"><span class="header-section-number">5.1</span> What is Google Earth Engine (GEE)?</a></li>
+  <li><a href="#gee-in-real-world" id="toc-gee-in-real-world" class="nav-link" data-scroll-target="#gee-in-real-world"><span class="header-section-number">5.2</span> GEE in real world</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -193,8 +220,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This week focuses on Google Earth Engine (GEE), a cloud-based platform designed for planetary-scale geospatial analysis. GEE represented a fundamental shift in our ability to monitor the Earth, and ten years later, we are exploring whether it lived up to the hype. In the following sections we will first set some background information what GEE is and what datasets we can find there, to later evaluate its real-world impact on the industry.</p>
+<section id="what-is-google-earth-engine-gee" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="what-is-google-earth-engine-gee"><span class="header-section-number">5.1</span> What is Google Earth Engine (GEE)?</h2>
+<p>Because I’m completely new to GEE I would like to start with writing up some basic information about it. GEE is cloud-based platform which provides massive amount of geo-spatial data, with planetary-scale analysis tools. The main components of GEE, which makes it (in theory) so impactful are:</p>
+<ul>
+<li><p><strong>The Public Data Archive</strong>: GEE contains ready-to-use 40 years historical and current data from sensors such as Sentinel, MODIS, or Landsat.</p></li>
+<li><p><strong>The Computational Infrastructure</strong>: it runs on Google servers, uses data stored in cloud (no downloading needed) which effects in extremely fast and efficient data analysis (unlike traditional GIS).</p></li>
+<li><p><strong>The APIs</strong>: users can interact with platform using JavaScript or Python scripts. No configuring hardware or managing backend infrastructure.</p></li>
+</ul>
+</section>
+<section id="gee-in-real-world" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="gee-in-real-world"><span class="header-section-number">5.2</span> GEE in real world</h2>
+<p>So how is GEE actually used in real world? To help answer I looked into two papers <span class="citation" data-cites="tamiminia2020">Tamiminia et al. (<a href="references.html#ref-tamiminia2020" role="doc-biblioref">2020</a>)</span> and <span class="citation" data-cites="martinez2023">Martinez-Arboleda, Morales-Hernandez, and Ordoñez-Galindo (<a href="references.html#ref-martinez2023" role="doc-biblioref">2023</a>)</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-martinez2023" class="csl-entry" role="listitem">
+Martinez-Arboleda, Joan Sebastian, Mario Morales-Hernandez, and Adriana Ordoñez-Galindo. 2023. <span>“A Systematic Review of <span>Remote</span> <span>Sensing</span> and <span>Geographic</span> <span>Information</span> <span>Systems</span> Based Techniques for Monitoring and Assessing the Impact of Urban Green Spaces on Urban Heat Island.”</span> <em>Remote Sensing Applications: Society and Environment</em> 29: 100897. <a href="https://doi.org/10.1016/j.rsase.2022.100897">https://doi.org/10.1016/j.rsase.2022.100897</a>.
+</div>
+<div id="ref-tamiminia2020" class="csl-entry" role="listitem">
+Tamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Ladan Beani, Brian Postrick, Brian Giammanco, and Brian Brisco. 2020. <span>“Google <span>Earth</span> <span>Engine</span> for Geo-Big Data Applications: <span>A</span> Meta-Analysis and Systematic Review.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 164: 152–70. <a href="https://doi.org/10.1016/j.isprsjprs.2020.04.001">https://doi.org/10.1016/j.isprsjprs.2020.04.001</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

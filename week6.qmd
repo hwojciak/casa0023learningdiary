@@ -4,3 +4,19 @@ format:
   html:
     lightbox: true
 ---
+
+This week focuses on Google Earth Engine (GEE), a cloud-based platform designed for planetary-scale geospatial analysis. GEE represented a fundamental shift in our ability to monitor the Earth, and ten years later, we are exploring whether it lived up to the hype. In the following sections we will first set some background information what GEE is and what datasets we can find there, to later evaluate its real-world impact on the industry.
+
+## What is Google Earth Engine (GEE)?
+
+Because I'm completely new to GEE I would like to start with writing up some basic information about it. GEE is cloud-based platform which provides massive amount of geo-spatial data, with planetary-scale analysis tools. The main components of GEE, which makes it (in theory) so impactful are:
+
+-   **The Public Data Archive**: GEE contains ready-to-use 40 years historical and current data from sensors such as Sentinel, MODIS, or Landsat.
+
+-   **The Computational Infrastructure**: it runs on Google servers, uses data stored in cloud (no downloading needed) which effects in extremely fast and efficient data analysis (unlike traditional GIS).
+
+-   **The APIs**: users can interact with platform using JavaScript or Python scripts. No configuring hardware or managing backend infrastructure.
+
+## GEE in real world
+
+So how is GEE actually used in real world? To help answer I looked into two papers @tamiminia2020 and @martinez2023
