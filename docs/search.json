@@ -92,51 +92,51 @@
   {
     "objectID": "week4_5.html",
     "href": "week4_5.html",
-    "title": "4  RS in Policies- Case Study",
+    "title": "4  Remoet Sensing and Policies- Case Study",
     "section": "",
     "text": "4.1 Making Cities Resilient 2030 (MCR2030)\nMCR 2030 is an initiative which aims to strengthen local resilience of the cities around the world. It was launched by United Nations Office for Disaster Risk Reduction (UNDRR) in collaboration with partners like Global Resilient Cities Network, ICLEI, C40 Cities Climate Leadership and many others (for full list please see this document), after a success of 10-year (2010-2020) campaign “Making Cities Resilient”. Key goals of this partnership is to help cities transition from raising awareness on local resilience to actually implementing risk-reduction and resilient infrastructure. It helps cities align with Sendai Framework for Disaster Risk Reduction, the Paris Agreement, and the Sustainable Development Goals (specifically SDG11).",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>RS in Policies- Case Study</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remoet Sensing and Policies- Case Study</span>"
     ]
   },
   {
     "objectID": "week4_5.html#making-cities-resilient-2030-mcr2030",
     "href": "week4_5.html#making-cities-resilient-2030-mcr2030",
-    "title": "4  RS in Policies- Case Study",
+    "title": "4  Remoet Sensing and Policies- Case Study",
     "section": "",
     "text": "4.1.1 Wroclaw as a Resilience Hub\nAs a case study I decided to choose my hometown- Wroclaw. It’s 4 largest city in Poland, located at southwestern part of the country, on the Odra (Oder) river. It’s location makes it prone to the flooding, and city has experience few of them especially in past 50 years. One of the biggest disasters happened in 1997, when Oder and Morava rivers caused flooding in Central Europe. After 1997 flood Wroclaw’s authorities focused on city’s risk-reduction and Wroclaw has become MCR Resilience Hub in 2022, leading an example of resilient infrastructure development. While preparing material for this entry I realised that, because Wroclaw has a solid experience in improving its infrastructure, it’s local authorities are already using remote sensing and spatial analysis in implementing those changes. In case of flooding there is also a well-functioning system in place - Copernicus Emergency Management Service (CEMS), which provides on demand mapping in case of natural hazards.\n\n\n\n\n\n\nFigure 4.1: On Demand Mapping on CEMS website- case of floods in South West Poland in 2024.\n\n\n\nI started thinking maybe there is no much space for suggestions how to use earth observation in supporting MCR2030-Wroclaw seems to be greener and more resilient to flooding. However, resilience does not stop at administrative borders, and a city’s safety is often dictated by the land-use choices of its immediate neighbours.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>RS in Policies- Case Study</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remoet Sensing and Policies- Case Study</span>"
     ]
   },
   {
     "objectID": "week4_5.html#resilient-infrastructure-in-suburban-areas",
     "href": "week4_5.html#resilient-infrastructure-in-suburban-areas",
-    "title": "4  RS in Policies- Case Study",
+    "title": "4  Remoet Sensing and Policies- Case Study",
     "section": "4.2 Resilient Infrastructure in Suburban Areas",
     "text": "4.2 Resilient Infrastructure in Suburban Areas\nWhile Wroclaw strengthens its internal defenses, the rapid expansion of the surrounding functional urban area presents a new set of vulnerabilities. What about suburban areas which don’t fall under the boundaries of cities? In polish administrative system they are separate entities, with their own mayors, but often falls into bigger agglomeration (like in case of Wroclaw). Being in an agglomeration would mean some degree of collaboration between city president (in Poland cities has presidents, and municipalities has mayors) and mayors of surrounding municipalities, but there is no rigours rules regarding the urban development of city vs its suburban areas. This leads to the situations like Wroclaw case where there are years of efforts to re-green city, making it more resilient, but just outside its boundaries there is rapid urban sprawl happening, with developments built on potential flood zones and intense “soil sealing” with no supporting drainage systems. My suggestion would be not only regarding the use of RS in urban planning but also to create a stronger administrative body responsible of more sustainable (and probably more controlled) development of suburban areas.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>RS in Policies- Case Study</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remoet Sensing and Policies- Case Study</span>"
     ]
   },
   {
     "objectID": "week4_5.html#proposed-improvement-the-agglomeration-resilience-authority",
     "href": "week4_5.html#proposed-improvement-the-agglomeration-resilience-authority",
-    "title": "4  RS in Policies- Case Study",
+    "title": "4  Remoet Sensing and Policies- Case Study",
     "section": "4.3 Proposed Improvement: The Agglomeration Resilience Authority",
     "text": "4.3 Proposed Improvement: The Agglomeration Resilience Authority\nTo address the disconnect between city planning and suburban sprawl, I suggest the establishment of an Agglomeration Resilience Authority. This would serve as a supra-municipal governing body empowered to oversee land-use permits across the entire metropolitan region. Its primary role would be to ensure that local suburban developments do not compromise regional flood safety or ecological health. By using Remote Sensing (RS) as its primary evidence-based tool, this authority could make informed, objective decisions in the following ways:\n\nStandardizing “Soil Sealing” Limits: By using High-Resolution Multispectral Imagery (e.g., Sentinel-2) to calculate the Normalized Difference Built-up Index (NDBI), the authority can set strict “permeability quotas.” This prevents excessive concrete cover in the suburbs from increasing runoff and overwhelming Wroclaw’s drainage systems.\nDynamic Flood Risk Mapping: Utilizing LiDAR-derived Digital Elevation Models (DEMs) allows for the identification of natural drainage corridors and micro-depressions. The authority can use this data to veto “high-risk” developments in areas that RS identifies as natural water retention zones, even if they aren’t marked on outdated traditional maps.\nMonitoring Trans-boundary Green Belts: Using the Normalized Difference Vegetation Index (NDVI), the body can ensure that “Green Lungs” remain continuous across administrative borders. RS allows for real-time tracking of whether suburban encroachment is fragmenting the forests and wetlands that the entire agglomeration relies on for cooling and water absorption.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>RS in Policies- Case Study</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remoet Sensing and Policies- Case Study</span>"
     ]
   },
   {
     "objectID": "week4_5.html#conclusion-data-driven-solidarity",
     "href": "week4_5.html#conclusion-data-driven-solidarity",
-    "title": "4  RS in Policies- Case Study",
+    "title": "4  Remoet Sensing and Policies- Case Study",
     "section": "4.4 Conclusion: Data-Driven Solidarity",
     "text": "4.4 Conclusion: Data-Driven Solidarity\nBy integrating Remote Sensing into a unified administrative framework, we move from “isolated resilience” to “territorial resilience.” This approach directly supports the MCR2030 goal of transitioning from awareness to implementation by ensuring urban growth is monitored through the lens of environmental physics rather than political boundaries. For Wroclaw to remain a true Resilience Hub, it must look beyond its city signs and use Earth Observation to lead its entire metropolitan region toward a safer, more porous future. This data-driven solidarity ensures that a win for one municipality is not a disaster for its neighbour.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>RS in Policies- Case Study</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remoet Sensing and Policies- Case Study</span>"
     ]
   },
   {
@@ -154,7 +154,7 @@
     "href": "week6.html#what-is-google-earth-engine-gee",
     "title": "5  Introduction to Google Earth Engine",
     "section": "",
-    "text": "The Public Data Archive: GEE contains ready-to-use 40 years historical and current data from sensors such as Sentinel, MODIS, or Landsat.\nThe Computational Infrastructure: it runs on Google servers, uses data stored in cloud (no downloading needed) which effects in extremely fast and efficient data analysis (unlike traditional GIS).\nThe APIs: users can interact with platform using JavaScript or Python scripts. No configuring hardware or managing backend infrastructure.",
+    "text": "The Public Data Archive : GEE contains ready-to-use 40 years historical and current data from sensors such as Sentinel, MODIS, or Landsat.\nThe Computational Infrastructure : it runs on Google servers, uses data stored in cloud (no downloading needed) which effects in extremely fast and efficient data analysis (unlike traditional GIS).\nThe APIs : users can interact with platform using JavaScript or Python scripts. No configuring hardware or managing backend infrastructure.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction to Google Earth Engine</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "week6.html#gee-in-real-world",
     "title": "5  Introduction to Google Earth Engine",
     "section": "5.2 GEE in real world",
-    "text": "5.2 GEE in real world\nSo what has shifted in geo-big data research after GEE was launched? As highlighted by Tamiminia et al. (2020) in their meta-analysis, GEE has fundamentally shifted the focus of remote sensing toward large-scale monitoring, with a heavy reliance on the Landsat archive and Random Forest classification algorithms (more on classification in text chapter!). This trend is mirrored in urban studies, such as those reviewed by Martinez-Arboleda, Morales-Hernandez, and Ordoñez-Galindo (2023), where GEE’s ability to process Land Surface Temperature (LST) data allows for the assessment of Urban Heat Islands (UHI) at a granularity previously impossible without high-performance local computing. In these contexts, GEE acts as a “democratizer” of data, allowing researchers to move from local case studies to national or even global assessments of nature-based solutions like urban green spaces.\nHowever, a critical evaluation of the literature reveals significant methodological and systemic biases. Methodologically, there is a persistent dominance of pixel-based rather than object-based classification; while more efficient in a cloud environment, pixel-based approaches often ignore the spatial context and “texture” of the landscape, potentially leading to lower accuracy in complex urban environments. More broadly, the evidence base itself may be skewed. Most systematic reviews, including those by Tamiminia et al. (2020), primarily sample English-language journals indexed in databases like Scopus or Web of Science. This creates a “geographical silence” regarding research conducted in other languages or published in regional journals, making it difficult to ascertain if GEE’s “global impact” is truly representative of global needs or merely reflective of the priorities of the English-speaking academic North.",
+    "text": "5.2 GEE in real world\nSo what has shifted in geo-big data research after GEE was launched? As highlighted by Tamiminia et al. (2020) in their meta-analysis, GEE has fundamentally shifted the focus of remote sensing toward large-scale monitoring, with a heavy reliance on the Landsat archive and Random Forest classification algorithms (more on classification in next chapter!). This trend is mirrored in urban studies, such as those reviewed by Martinez-Arboleda, Morales-Hernandez, and Ordoñez-Galindo (2023), where GEE’s ability to process Land Surface Temperature (LST) data allows for the assessment of Urban Heat Islands (UHI) at a granularity previously impossible without high-performance local computing. In these contexts, GEE acts as a “democratizer” of data, allowing researchers to move from local case studies to national or even global assessments of nature-based solutions like urban green spaces.\nHowever, a critical evaluation of the literature reveals significant methodological and systemic biases. Methodologically, there is a persistent dominance of pixel-based rather than object-based classification; while more efficient in a cloud environment, pixel-based approaches often ignore the spatial context and “texture” of the landscape, potentially leading to lower accuracy in complex urban environments. More broadly, the evidence base itself may be skewed. Most systematic reviews, including those by Tamiminia et al. (2020), primarily sample English-language journals indexed in databases like Scopus or Web of Science. This creates underrepresentation of research conducted in other languages or published in regional journals, making it difficult to assess if GEE’s “global impact” is truly representative of global needs or just reflective of the priorities of the English-speaking academic North.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introduction to Google Earth Engine</span>"
     ]
@@ -180,13 +180,33 @@
     ]
   },
   {
+    "objectID": "week7.html",
+    "href": "week7.html",
+    "title": "6  Machine Learning in Remote Sensing Practice",
+    "section": "",
+    "text": "6.1 Applications\nNote: This entry is combination of Classification I and Classification II lectures, as those lectures are closely related and it felt more natural that way!\nNow, after having an overview of how GEE is used in real world, we will dive deeper into some specific analysis methods that can be applied to satellite imagery. This entry will mostly revolve around classification methods- process of using machine learning algorithms to categorise pixels in satellite imagery into discrete land cover or land use classes (e.g. water, forest, urban) based on their spectral characteristics. To grasp the big picture of classification methods/workflows used in remote sensing I created this graph. As quick example of pixel-based classification, using Classification and Regression Trees (CART) and Random Forest (RF), I’ll use workflow demonstrated in the practical. Here is little snippet of practical showing the supervised classification using random forest of 100 decision trees:\nWhich resulted in LULC map of Wroclaw:\nIt looks ok, but I’m quite sceptical about the training process used in this method. I manually chose training polygons, which mean I purely based it on visual assessment what looks like forest vs “general” vegetation vs urban areas etc. It was great practice run for classification methods, but I decided to modify this workflow to shift it to Object-Based Image Analysis (OBIA)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Machine Learning in Remote Sensing Practice</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#reflections",
+    "href": "week7.html#reflections",
+    "title": "6  Machine Learning in Remote Sensing Practice",
+    "section": "6.2 Reflections",
+    "text": "6.2 Reflections\nThis week was super interesting, though conceptually quite a stretch! Since I’m also taking CASA0006, it was great to see a bridge forming between ML theory and remote sensing practice. It served as a solid revision of what we’ve covered in Data Science module, but from a different angle. Seeing the tangible results you can achieve with spatial data makes the complexity of ML feel much more exciting.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Machine Learning in Remote Sensing Practice</span>"
+    ]
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "8  Summary",
+    "title": "7  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {

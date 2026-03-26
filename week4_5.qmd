@@ -1,5 +1,5 @@
 ---
-title: "RS in Policies- Case Study"
+title: "Remoet Sensing and Policies- Case Study"
 format:
   html:
     lightbox: true

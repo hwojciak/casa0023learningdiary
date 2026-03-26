@@ -11,18 +11,20 @@ This week focuses on Google Earth Engine (GEE), a cloud-based platform designed 
 
 Because I'm completely new to GEE I would like to start with writing up some basic information about it. GEE is cloud-based platform which provides massive amount of geo-spatial data, with planetary-scale analysis tools. The main components of GEE, which makes it (in theory) so impactful are:
 
--   **The Public Data Archive**: GEE contains ready-to-use 40 years historical and current data from sensors such as Sentinel, MODIS, or Landsat.
+-   **The Public Data Archive** : GEE contains ready-to-use 40 years historical and current data from sensors such as Sentinel, MODIS, or Landsat.
 
--   **The Computational Infrastructure**: it runs on Google servers, uses data stored in cloud (no downloading needed) which effects in extremely fast and efficient data analysis (unlike traditional GIS).
+-   **The Computational Infrastructure** : it runs on Google servers, uses data stored in cloud (no downloading needed) which effects in extremely fast and efficient data analysis (unlike traditional GIS).
 
--   **The APIs**: users can interact with platform using JavaScript or Python scripts. No configuring hardware or managing backend infrastructure.
+-   **The APIs** : users can interact with platform using JavaScript or Python scripts. No configuring hardware or managing backend infrastructure.
 
 ## GEE in real world
 
-So what has shifted in geo-big data research after GEE was launched? As highlighted by @tamiminia2020 in their meta-analysis, GEE has fundamentally shifted the focus of remote sensing toward large-scale monitoring, with a heavy reliance on the Landsat archive and Random Forest classification algorithms (more on classification in text chapter!). This trend is mirrored in urban studies, such as those reviewed by @martinez2023, where GEE’s ability to process Land Surface Temperature (LST) data allows for the assessment of Urban Heat Islands (UHI) at a granularity previously impossible without high-performance local computing. In these contexts, GEE acts as a "democratizer" of data, allowing researchers to move from local case studies to national or even global assessments of nature-based solutions like urban green spaces.
+So what has shifted in geo-big data research after GEE was launched? As highlighted by @tamiminia2020 in their meta-analysis, GEE has fundamentally shifted the focus of remote sensing toward large-scale monitoring, with a heavy reliance on the Landsat archive and Random Forest classification algorithms (more on classification in next chapter!). This trend is mirrored in urban studies, such as those reviewed by @martinez2023, where GEE’s ability to process Land Surface Temperature (LST) data allows for the assessment of Urban Heat Islands (UHI) at a granularity previously impossible without high-performance local computing. In these contexts, GEE acts as a "democratizer" of data, allowing researchers to move from local case studies to national or even global assessments of nature-based solutions like urban green spaces.
 
-However, a critical evaluation of the literature reveals significant methodological and systemic biases. Methodologically, there is a persistent dominance of pixel-based rather than object-based classification; while more efficient in a cloud environment, pixel-based approaches often ignore the spatial context and "texture" of the landscape, potentially leading to lower accuracy in complex urban environments. More broadly, the evidence base itself may be skewed. Most systematic reviews, including those by @tamiminia2020, primarily sample English-language journals indexed in databases like Scopus or Web of Science. This creates a "geographical silence" regarding research conducted in other languages or published in regional journals, making it difficult to ascertain if GEE’s "global impact" is truly representative of global needs or merely reflective of the priorities of the English-speaking academic North.
+However, a critical evaluation of the literature reveals significant methodological and systemic biases. Methodologically, there is a persistent dominance of pixel-based rather than object-based classification; while more efficient in a cloud environment, pixel-based approaches often ignore the spatial context and "texture" of the landscape, potentially leading to lower accuracy in complex urban environments. More broadly, the evidence base itself may be skewed. Most systematic reviews, including those by @tamiminia2020, primarily sample English-language journals indexed in databases like Scopus or Web of Science. This creates underrepresentation of research conducted in other languages or published in regional journals, making it difficult to assess if GEE’s "global impact" is truly representative of global needs or just reflective of the priorities of the English-speaking academic North.
 
 ## Reflections 
+
+
 
 
