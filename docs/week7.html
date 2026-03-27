@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -211,8 +231,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#applications" id="toc-applications" class="nav-link active" data-scroll-target="#applications"><span class="header-section-number">6.1</span> Applications</a></li>
-  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.2</span> Reflections</a></li>
+  <li><a href="#machine-learning-in-action-the-pixel-based-approach" id="toc-machine-learning-in-action-the-pixel-based-approach" class="nav-link active" data-scroll-target="#machine-learning-in-action-the-pixel-based-approach"><span class="header-section-number">6.1</span> Machine Learning in Action: The Pixel Based approach</a></li>
+  <li><a href="#shifting-the-approach-testing-obia" id="toc-shifting-the-approach-testing-obia" class="nav-link" data-scroll-target="#shifting-the-approach-testing-obia"><span class="header-section-number">6.2</span> Shifting the Approach: Testing OBIA</a></li>
+  <li><a href="#refining-the-object--why-my-obia-failed" id="toc-refining-the-object--why-my-obia-failed" class="nav-link" data-scroll-target="#refining-the-object--why-my-obia-failed"><span class="header-section-number">6.3</span> Refining the “Object”- Why My OBIA Failed</a>
+  <ul class="collapse">
+  <li><a href="#so-what-is-the-best-approach" id="toc-so-what-is-the-best-approach" class="nav-link" data-scroll-target="#so-what-is-the-best-approach"><span class="header-section-number">6.3.1</span> …so what is the best approach?</a></li>
+  </ul></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.4</span> Reflections</a></li>
   </ul>
 </nav>
     </div>
@@ -239,7 +264,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><em>Note: This entry is combination of Classification I and Classification II lectures, as those lectures are closely related and it felt more natural that way!</em></p>
-<p>Now, after having an overview of how GEE is used in real world, we will dive deeper into some specific analysis methods that can be applied to satellite imagery. This entry will mostly revolve around classification methods- process of using machine learning algorithms to categorise pixels in satellite imagery into discrete land cover or land use classes (e.g.&nbsp;water, forest, urban) based on their spectral characteristics. To grasp the big picture of classification methods/workflows used in remote sensing I created this graph. As quick example of pixel-based classification, using Classification and Regression Trees (CART) and Random Forest (RF), I’ll use workflow demonstrated in the practical. Here is little snippet of practical showing the <strong>supervised classification</strong> using random forest of 100 decision trees:</p>
+<p>Now that we’ve seen how GEE functions in the real world, it’s time to dive deeper into the specific analysis methods used to interpret satellite imagery. This entry focuses on classification - the process of using machine learning algorithms to categorize pixels into discrete land cover or land use classes (e.g., water, forest, or urban) based on their spectral characteristics. To help visualize the workflows used in remote sensing, I’ve mapped out the general process below: In the following sections, I’ll compare Pixel-Based Classification with Object-Based Image Analysis (OBIA), critically reflecting on when to use each and the limitations they bring to a project.</p>
+<section id="machine-learning-in-action-the-pixel-based-approach" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="machine-learning-in-action-the-pixel-based-approach"><span class="header-section-number">6.1</span> Machine Learning in Action: The Pixel Based approach</h2>
+<p>As a simple example of pixel-based classification, using Random Forest (RF), I’ll use workflow demonstrated in the practical. Here is little snippet of practical showing the <strong>supervised classification</strong> using random forest of 100 decision trees:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Train a Random Forest classifier with 100 trees</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> rf_classifier <span class="op">=</span> ee<span class="op">.</span><span class="at">Classifier</span><span class="op">.</span><span class="fu">smileRandomForest</span>(<span class="dv">100</span>)<span class="op">.</span><span class="fu">train</span>({</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">features</span><span class="op">:</span> training<span class="op">,</span></span>
@@ -249,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">// Apply the classification to the clipped image</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> classified_map <span class="op">=</span> waytwo_clip<span class="op">.</span><span class="fu">classify</span>(rf_classifier)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Which resulted in LULC map of Wroclaw:</p>
+<p>This produced a Land Use/Land Cover (LULC) map of Wroclaw:</p>
 <div id="fig-week7" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-week7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -260,18 +288,79 @@ Figure&nbsp;6.1: LULC map of Wroclaw, made in GEE.
 </figcaption>
 </figure>
 </div>
-<p>It looks ok, but I’m quite sceptical about the training process used in this method. I manually chose training polygons, which mean I purely based it on visual assessment what looks like forest vs “general” vegetation vs urban areas etc. It was great practice run for classification methods, but I decided to modify this workflow to shift it to Object-Based Image Analysis (OBIA)</p>
-<div id="fig2-week7" data-fig-cap="Visualising making of LULC map of Wroclaw, using OBIA method.">
-<p><a href="images/OBIAprogress.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/OBIAprogress.png" class="img-fluid"></a></p>
-</div>
-<section id="applications" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.1</span> Applications</h2>
+<p>While the result looks ok, I’m quite skeptical of the training process. Because I manually selected the training polygons, the model is entirely dependent on my subjective visual assessment of what looks like “forest” versus “general vegetation” or “urban.” This manual approach doesn’t guarantee high accuracy. Furthermore, the output is notably “grainy” - a fundamental limitation of pixel-based methods.</p>
 </section>
-<section id="reflections" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.2</span> Reflections</h2>
-<p>This week was super interesting, though conceptually quite a stretch! Since I’m also taking CASA0006, it was great to see a bridge forming between ML theory and remote sensing practice. It served as a solid revision of what we’ve covered in Data Science module, but from a different angle. Seeing the tangible results you can achieve with spatial data makes the complexity of ML feel much more exciting.</p>
+<section id="shifting-the-approach-testing-obia" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="shifting-the-approach-testing-obia"><span class="header-section-number">6.2</span> Shifting the Approach: Testing OBIA</h2>
+<p>To “smooth out” the LULC map and improve spatial logic, I decided to shift the workflow toward OBIA. Unlike pixel-based methods, OBIA groups pixels into meaningful “objects” (like an individual building or a lake) through a process called segmentation before classifying them.</p>
+<p>My first attempt at OBIA was quite poor- it appeared “blocky” and unnatural, with results that felt less representative than my initial pixel-based map. I decided to tune in some of the SNIC segmentation parameters going from:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> snic <span class="op">=</span> ee<span class="op">.</span><span class="at">Algorithms</span><span class="op">.</span><span class="at">Image</span><span class="op">.</span><span class="at">Segmentation</span><span class="op">.</span><span class="fu">SNIC</span>({</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">image</span><span class="op">:</span> waytwo_clip<span class="op">,</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">size</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">compactness</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">connectivity</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">neighborhoodSize</span><span class="op">:</span> <span class="dv">128</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">select</span>([<span class="st">'B2_mean'</span><span class="op">,</span> <span class="st">'B3_mean'</span><span class="op">,</span> <span class="st">'B4_mean'</span><span class="op">,</span> <span class="st">'B5_mean'</span><span class="op">,</span> <span class="st">'B6_mean'</span><span class="op">,</span> <span class="st">'B7_mean'</span>]<span class="op">,</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>          [<span class="st">'B2'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B4'</span><span class="op">,</span> <span class="st">'B5'</span><span class="op">,</span> <span class="st">'B6'</span><span class="op">,</span> <span class="st">'B7'</span>])<span class="op">;</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>to:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> snic <span class="op">=</span> ee<span class="op">.</span><span class="at">Algorithms</span><span class="op">.</span><span class="at">Image</span><span class="op">.</span><span class="at">Segmentation</span><span class="op">.</span><span class="fu">SNIC</span>({</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">image</span><span class="op">:</span> waytwo_clip<span class="op">,</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">size</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span>           <span class="co">// REDUCED: smaller seeds = finer detail for urban areas</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">compactness</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span>     <span class="co">// SET TO 0: allows segments to be irregular/organic shapes </span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">connectivity</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span>   </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">neighborhoodSize</span><span class="op">:</span> <span class="dv">256</span> <span class="co">// INCREASED: gives the algorithm more "room" to find boundaries</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">select</span>([<span class="st">'B2_mean'</span><span class="op">,</span> <span class="st">'B3_mean'</span><span class="op">,</span> <span class="st">'B4_mean'</span><span class="op">,</span> <span class="st">'B5_mean'</span><span class="op">,</span> <span class="st">'B6_mean'</span><span class="op">,</span> <span class="st">'B7_mean'</span>]<span class="op">,</span> </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>          [<span class="st">'B2'</span><span class="op">,</span> <span class="st">'B3'</span><span class="op">,</span> <span class="st">'B4'</span><span class="op">,</span> <span class="st">'B5'</span><span class="op">,</span> <span class="st">'B6'</span><span class="op">,</span> <span class="st">'B7'</span>])<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Although spatial coherence improved after those adjustments, the overall thematic accuracy still looked worse than my first map (see <a href="#fig-week7fig2" class="quarto-xref">Figure&nbsp;<span>6.3</span></a>).</p>
+<div id="fig-week7fig2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-week7fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/OBIAprogress.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;6.2: Visualising making of LULC map of Wroclaw, using OBIA method."><img src="images/OBIAprogress.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-week7fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: Visualising making of LULC map of Wroclaw, using OBIA method.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="refining-the-object--why-my-obia-failed" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="refining-the-object--why-my-obia-failed"><span class="header-section-number">6.3</span> Refining the “Object”- Why My OBIA Failed</h2>
+<p>Through this process, I realised that for OBIA to be truly effective, the Random Forest algorithm needs more “descriptors” than a pixel-based model. In my trial, I only provided spectral means (the average colour of the object). To improve this, I would need to perform more detailed feature extraction between the segmentation and classification stages (not limited only to mean spectral values). By extracting textural and geometric descriptors, I could provide the Random Forest with the context it needs to distinguish between spectrally similar classes, for instance, telling the difference between a smooth grass lawn and a rough forest canopy based on texture rather than just greenness.</p>
+<p>As noted by <span class="citation" data-cites="shafizadeh2021google">Shafizadeh-Moghadam et al. (<a href="references.html#ref-shafizadeh2021google" role="doc-biblioref">2021</a>)</span>, sophisticated models often incorporate GLCM (Gray-Level Co-occurrence Matrix) texture measures and geometric attributes, such as “linearity” for identifying roads. This transforms the input from a simple “mean colour” into a multi-dimensional description of what a feature looks like and how it is shaped-an essential step for mapping complex urban environments like Wroclaw. Here is great depiction of such complex OBIA workflow:</p>
+<div id="fig-week7fig2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-week7fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/OBIAworkflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;6.3: Flowchart of the general process of LULC classification within the GEE environment.- @shafizadeh2021google"><img src="images/OBIAworkflow.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-week7fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: <em>Flowchart of the general process of LULC classification within the GEE environment.- <span class="citation" data-cites="shafizadeh2021google">Shafizadeh-Moghadam et al. (<a href="references.html#ref-shafizadeh2021google" role="doc-biblioref">2021</a>)</span></em>
+</figcaption>
+</figure>
+</div>
+<section id="so-what-is-the-best-approach" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="so-what-is-the-best-approach"><span class="header-section-number">6.3.1</span> …so what is the best approach?</h3>
+<p>While well-performed OBIA offers very detailed, and context-sensitive maps, it does come with at the cost- it’s more computationally expensive and requires more expertise than simple pixel-based RF classification. Due to those limitations it would be difficult to work with it when we want to map global changes like <a href="https://glad.earthengine.app/view/global-forest-change#bl=off;old=off;dl=1;lon=-0.7526137189502302;lat=4.652604809147838;zoom=3;">Global Forest Change</a>. <span class="citation" data-cites="hansen2013high">Hansen et al. (<a href="references.html#ref-hansen2013high" role="doc-biblioref">2013</a>)</span> mapped global forest change, using 30m pixel resolution classification. It’s great for monitoring the big picture, but as mentioned <a href="https://www.science.org/doi/full/10.1126/science.1248753">here</a> it comes with serious shortcomings. For instance, some deforested areas converted into plantations might be still be classified as a forests.</p>
+<p>In cases where classification based on a whole 30m pixel fails, <strong>sub-pixel analysis</strong> offers a solution. <span class="citation" data-cites="chen2021monitoring">Chen et al. (<a href="references.html#ref-chen2021monitoring" role="doc-biblioref">2021</a>)</span> demonstrated this by using Landsat time series to monitor forest degradation. Unlike Hansen’s binary approach (forest vs.&nbsp;non-forest), sub-pixel analysis uses Spectral Mixture Analysis to estimate the fraction of vegetation within a pixel. This allows detection subtle changes (like selective logging) where the canopy is thinned but the pixel hasn’t technically turned into a field yet.</p>
+<p>All those technical subtleties loops back to treating science as an art, and knowing that at the end it is subjective, and might come with (un)intentional biases. What works for global mapping might often fail for the local scale, and interpreting results obtained from classification, should involve checking them against other types of evidence.</p>
+</section>
+</section>
+<section id="reflections" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.4</span> Reflections</h2>
+<p>These two weeks were super interesting, though conceptually quite a stretch! Since I’m also taking CASA0006, it was great to see a bridge forming between ML theory and remote sensing practice. It served as a solid revision of what we’ve covered in Data Science module, but from a different angle. Seeing the tangible results you can achieve with spatial data makes the complexity of ML feel much more exciting.</p>
+<p>I still struggle to navigate different classification workflows, and I know that learning to adjust parameters with confidence will take time and practice. Nevertheless, I really enjoyed getting into the weeds of classification and I’m looking forward to gaining more fluency in combined ML and RS projects. In the future, I would love to be able to write algorithms for detecting urban growth or identifying informal settlements.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-chen2021monitoring" class="csl-entry" role="listitem">
+Chen, Shijuan, Curtis E Woodcock, Eric L Bullock, Paulo Arévalo, Paata Torchinava, Siqi Peng, and Pontus Olofsson. 2021. <span>“Monitoring Temperate Forest Degradation on Google Earth Engine Using Landsat Time Series Analysis.”</span> <em>Remote Sensing of Environment</em> 265: 112648. <a href="https://doi.org/10.1016/j.rse.2021.112648">https://doi.org/10.1016/j.rse.2021.112648</a>.
+</div>
+<div id="ref-hansen2013high" class="csl-entry" role="listitem">
+Hansen, Matthew C, Peter V Potapov, Rebecca Moore, Matt Hancher, Svetlana A Turubanova, Alexandra Tyukavina, David Thau, et al. 2013. <span>“High-Resolution Global Maps of 21st-Century Forest Cover Change.”</span> <em>Science</em> 342 (6160): 850–53. <a href="https://doi.org/10.1126/science.1244693">https://doi.org/10.1126/science.1244693</a>.
+</div>
+<div id="ref-shafizadeh2021google" class="csl-entry" role="listitem">
+Shafizadeh-Moghadam, Hossein, Morteza Khazaei, Seyed Kazem Alavipanah, and Qihao Weng. 2021. <span>“Google <span>Earth</span> <span>Engine</span> for Large-Scale Land Use and Land Cover Mapping: An Object-Based Classification Approach Using Spectral, Textural and Topographical Factors.”</span> <em>GIScience &amp; Remote Sensing</em> 58 (6): 914–28. <a href="https://doi.org/10.1080/15481603.2021.1947623">https://doi.org/10.1080/15481603.2021.1947623</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
