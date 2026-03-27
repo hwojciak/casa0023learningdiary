@@ -7,7 +7,8 @@ format:
 
 *Note: This entry is combination of Classification I and Classification II lectures, as those lectures are closely related and it felt more natural that way!*
 
-Now that we’ve seen how GEE functions in the real world, it’s time to dive deeper into the specific analysis methods used to interpret satellite imagery. This entry focuses on classification - the process of using machine learning algorithms to categorize pixels into discrete land cover or land use classes (e.g., water, forest, or urban) based on their spectral characteristics. To help visualize the workflows used in remote sensing, I’ve mapped out the general process below:
+Now that we’ve seen how GEE functions in the real world, it’s time to dive deeper into the specific analysis methods used to interpret satellite imagery. This entry focuses on classification - the process of using machine learning algorithms to categorize pixels into discrete land cover or land use classes (e.g., water, forest, or urban) based on their spectral characteristics.
+
 In the following sections, I’ll compare Pixel-Based Classification with Object-Based Image Analysis (OBIA), critically reflecting on when to use each and the limitations they bring to a project. 
 
 ## Machine Learning in Action: The Pixel Based approach

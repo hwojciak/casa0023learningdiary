@@ -144,7 +144,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Landsat Program</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -156,7 +156,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remoet Sensing and Policies- Case Study</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing and Policies- Case Study</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -173,8 +173,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Synthetic Aperature Radar (SAR)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Final Reflections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -194,7 +200,10 @@ div.csl-indent {
    
   <ul>
   <li><a href="#what-is-google-earth-engine-gee" id="toc-what-is-google-earth-engine-gee" class="nav-link active" data-scroll-target="#what-is-google-earth-engine-gee"><span class="header-section-number">5.1</span> What is Google Earth Engine (GEE)?</a></li>
-  <li><a href="#gee-in-real-world" id="toc-gee-in-real-world" class="nav-link" data-scroll-target="#gee-in-real-world"><span class="header-section-number">5.2</span> GEE in real world</a></li>
+  <li><a href="#gee-in-real-world" id="toc-gee-in-real-world" class="nav-link" data-scroll-target="#gee-in-real-world"><span class="header-section-number">5.2</span> GEE in real world</a>
+  <ul class="collapse">
+  <li><a href="#biases" id="toc-biases" class="nav-link" data-scroll-target="#biases"><span class="header-section-number">5.2.1</span> Biases?</a></li>
+  </ul></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">5.3</span> Reflections</a></li>
   </ul>
 </nav>
@@ -233,11 +242,15 @@ div.csl-indent {
 </section>
 <section id="gee-in-real-world" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="gee-in-real-world"><span class="header-section-number">5.2</span> GEE in real world</h2>
-<p>So what has shifted in geo-big data research after GEE was launched? As highlighted by <span class="citation" data-cites="tamiminia2020">Tamiminia et al. (<a href="references.html#ref-tamiminia2020" role="doc-biblioref">2020</a>)</span> in their meta-analysis, GEE has fundamentally shifted the focus of remote sensing toward large-scale monitoring, with a heavy reliance on the Landsat archive and Random Forest classification algorithms (more on classification in next chapter!). This trend is mirrored in urban studies, such as those reviewed by <span class="citation" data-cites="martinez2023">Martinez-Arboleda, Morales-Hernandez, and Ordoñez-Galindo (<a href="references.html#ref-martinez2023" role="doc-biblioref">2023</a>)</span>, where GEE’s ability to process Land Surface Temperature (LST) data allows for the assessment of Urban Heat Islands (UHI) at a granularity previously impossible without high-performance local computing. In these contexts, GEE acts as a “democratizer” of data, allowing researchers to move from local case studies to national or even global assessments of nature-based solutions like urban green spaces.</p>
-<p>However, a critical evaluation of the literature reveals significant methodological and systemic biases. Methodologically, there is a persistent dominance of pixel-based rather than object-based classification; while more efficient in a cloud environment, pixel-based approaches often ignore the spatial context and “texture” of the landscape, potentially leading to lower accuracy in complex urban environments. More broadly, the evidence base itself may be skewed. Most systematic reviews, including those by <span class="citation" data-cites="tamiminia2020">Tamiminia et al. (<a href="references.html#ref-tamiminia2020" role="doc-biblioref">2020</a>)</span>, primarily sample English-language journals indexed in databases like Scopus or Web of Science. This creates underrepresentation of research conducted in other languages or published in regional journals, making it difficult to assess if GEE’s “global impact” is truly representative of global needs or just reflective of the priorities of the English-speaking academic North.</p>
+<p>So what has shifted in geo-big data research after GEE was launched? As highlighted by <span class="citation" data-cites="tamiminia2020">Tamiminia et al. (<a href="references.html#ref-tamiminia2020" role="doc-biblioref">2020</a>)</span> in their meta-analysis, GEE has shifted the focus of remote sensing toward large-scale monitoring, with a heavy reliance on the Landsat archive and Random Forest classification algorithms (more on classification in next chapter!). This trend is mirrored in urban studies, such as those reviewed by <span class="citation" data-cites="martinez2023">Martinez-Arboleda, Morales-Hernandez, and Ordoñez-Galindo (<a href="references.html#ref-martinez2023" role="doc-biblioref">2023</a>)</span>, where GEE’s ability to process Land Surface Temperature (LST) data allows for the assessment of Urban Heat Islands (UHI) at a granularity previously impossible without high-performance local computing. In these contexts, GEE acts as a “democratizer” of data, allowing researchers to move from local case studies to national or even global assessments of nature-based solutions like urban green spaces.</p>
+<section id="biases" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="biases"><span class="header-section-number">5.2.1</span> Biases?</h3>
+<p>Methodologically, there is a persistent dominance of pixel-based rather than object-based classification; while more efficient in a cloud environment, pixel-based approaches often ignore the spatial context and texture of the landscape, potentially leading to lower accuracy in complex urban environments. More broadly, the evidence base itself may be skewed. Most systematic reviews, including those by <span class="citation" data-cites="tamiminia2020">Tamiminia et al. (<a href="references.html#ref-tamiminia2020" role="doc-biblioref">2020</a>)</span>, primarily sample English-language journals indexed in databases like Scopus or Web of Science. This creates underrepresentation of research conducted in other languages or published in regional journals, making it difficult to assess if GEE’s “global impact” is truly representative of global needs or just reflective of the priorities of the English-speaking academic North.</p>
+</section>
 </section>
 <section id="reflections" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">5.3</span> Reflections</h2>
+<p>GEE seems very promising and I’m curious to explore what can be done with it. My main concern with it is the fact that it’s owned by private company. It currently offers free access for research and education, relying on such big, profit-driven entity feels…stressful? I wonder what happens when the GEE pricing changes. Another barrier is the APIs. Although they do offer some simplicity, there is still coding barrier to it- it is still not accessible for researchers with no programming experience. Nevertheless I’m excited to explore it further and see where it takes me!</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -653,8 +666,8 @@ Tamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Ladan Beani, Brian Postrick
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week4_5.html" class="pagination-link" aria-label="Remoet Sensing and Policies- Case Study">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remoet Sensing and Policies- Case Study</span></span>
+      <a href="./week4_5.html" class="pagination-link" aria-label="Remote Sensing and Policies- Case Study">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing and Policies- Case Study</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

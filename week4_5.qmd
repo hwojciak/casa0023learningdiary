@@ -1,5 +1,5 @@
 ---
-title: "Remoet Sensing and Policies- Case Study"
+title: "Remote Sensing and Policies- Case Study"
 format:
   html:
     lightbox: true
@@ -26,12 +26,12 @@ While Wroclaw strengthens its internal defenses, the rapid expansion of the surr
 
 To address the disconnect between city planning and suburban sprawl, I suggest the establishment of an Agglomeration Resilience Authority. This would serve as a supra-municipal governing body empowered to oversee land-use permits across the entire metropolitan region. Its primary role would be to ensure that local suburban developments do not compromise regional flood safety or ecological health. By using Remote Sensing (RS) as its primary evidence-based tool, this authority could make informed, objective decisions in the following ways:
 
--   Standardizing "Soil Sealing" Limits: By using High-Resolution Multispectral Imagery (e.g., Sentinel-2) to calculate the Normalized Difference Built-up Index (NDBI), the authority can set strict "permeability quotas." This prevents excessive concrete cover in the suburbs from increasing runoff and overwhelming Wroclaw’s drainage systems.
+-   **Standardizing "Soil Sealing" Limits**: By using High-Resolution Multispectral Imagery (e.g., Sentinel-2) to calculate the Normalized Difference Built-up Index (NDBI), the authority can set strict "permeability quotas." This prevents excessive concrete cover in the suburbs from increasing runoff and overwhelming Wroclaw’s drainage systems.
 
--    Dynamic Flood Risk Mapping: Utilizing LiDAR-derived Digital Elevation Models (DEMs) allows for the identification of natural drainage corridors and micro-depressions. The authority can use this data to veto "high-risk" developments in areas that RS identifies as natural water retention zones, even if they aren't marked on outdated traditional maps.
+-    **Dynamic Flood Risk Mapping: Utilizing LiDAR**: Derived Digital Elevation Models (DEMs) allows for the identification of natural drainage corridors and micro-depressions. The authority can use this data to veto high-risk developments in areas that RS identifies as natural water retention zones, even if they aren't marked on outdated traditional maps.
 
--    Monitoring Trans-boundary Green Belts: Using the Normalized Difference Vegetation Index (NDVI), the body can ensure that "Green Lungs" remain continuous across administrative borders. RS allows for real-time tracking of whether suburban encroachment is fragmenting the forests and wetlands that the entire agglomeration relies on for cooling and water absorption.
+-    **Monitoring Trans-boundary Green Belts**: Using e.g. the Normalized Difference Vegetation Index (NDVI), the body can ensure that "Green Lungs" remain continuous across administrative borders.
 
 ## Conclusion: Data-Driven Solidarity
 
-By integrating Remote Sensing into a unified administrative framework, we move from "isolated resilience" to "territorial resilience." This approach directly supports the MCR2030 goal of transitioning from awareness to implementation by ensuring urban growth is monitored through the lens of environmental physics rather than political boundaries. For Wroclaw to remain a true Resilience Hub, it must look beyond its city signs and use Earth Observation to lead its entire metropolitan region toward a safer, more porous future. This data-driven solidarity ensures that a win for one municipality is not a disaster for its neighbour.
+By integrating Remote Sensing into a unified administrative framework, we move from resilience designated by boundaries to more inclusive resilience. This approach directly supports the MCR2030 goal of transitioning from awareness to implementation by ensuring urban growth is monitored through the environmental lens rather than political boundaries. For Wroclaw to remain a true Resilience Hub, it must look beyond its city signs and use EO to lead its entire metropolitan region toward a safer, more porous future. This data-driven solidarity ensures that a win for one municipality is not a disaster for its neighbour.

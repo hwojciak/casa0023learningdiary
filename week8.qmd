@@ -1,6 +1,10 @@
 ---
-title: "Classification II"
+title: "Synthetic Aperature Radar (SAR)"
 format:
   html:
     lightbox: true
 ---
+
+This week focuses on Synthetic Aperture Radar (SAR). As mentioned in [week 1](week1.qmd) remote sensors can be either passive or active. SAR is a specific example of aperture which provides its own energy source in the microwave spectrum, allowing it to "see" through clouds and operate at night. 
+
+...well unfortunately I did not manage to finish this section on time:(

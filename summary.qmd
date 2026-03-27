@@ -1,7 +1,7 @@
-# Summary
+# Final Reflections 
 
-In summary, this book has no content whatsoever.
+Thank you for reading! This module was huge challenge for me, as I never encounter EO or RS in my life. Every week required a lot of background reading, rereading all the definitions and concepts and oh boy I got lost in some RS rabbit holes for sure. 
 
-```{r}
-1 + 1
-```
+I appreciate everything I learned even if my Learning Diary ended up being incomplete...I definitely underestimated how much time it would take! You might also notice the quality of entries shifts week-to-week, but that’s usually because I spent so much time trying to truly grasp the harder concepts. Anyway no regrets, because I'm finishing off this Learning Diary knowing so much more then at the start of it!
+
+Now onto next adventure and I'm grateful that this module inspired me to use RS in my dissertation! 

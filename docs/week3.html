@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -127,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Landsat Program</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -139,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remoet Sensing and Policies- Case Study</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing and Policies- Case Study</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -156,8 +176,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Synthetic Aperature Radar (SAR)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Final Reflections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -207,7 +233,8 @@ ul.task-list li input[type="checkbox"] {
 <p>When dealing with satellite data, in most cases, we will deal with pre-processed imagery, which is ready to analyse. There is number of remote sensing data corrections and in this section I would like to introduce few of them, with a main focus on specific ratio index - Normalised Difference Vegetation Index (NDVI).</p>
 <section id="filtering-texture-analysis-and-principal-component-analysis-pca" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="filtering-texture-analysis-and-principal-component-analysis-pca"><span class="header-section-number">3.1</span> Filtering, Texture Analysis and Principal Component Analysis (PCA)</h2>
-<p>Before focusing on NDVI, I explored several image processing techniques introduced in the practical, including filtering, texture analysis and Principal Component Analysis (PCA). Visually, this did not necessarily “improve” the image, but it reduces small-scale pixel noise and stabilises local variation. This is particularly relevant when performing further statistical operations (e.g.&nbsp;texture or PCA), as these methods can otherwise be overly sensitive to abrupt pixel-to-pixel differences that may reflect sensor noise rather than real landscape structure. I then calculated GLCM texture (homogeneity) using a 7×7 window. Unlike spectral bands, texture does not measure reflectance but rather the spatial arrangement of pixel values. High homogeneity indicates uniform surfaces (e.g.&nbsp;large vegetated patches or water bodies), while lower values suggest more heterogeneous urban fabric. However, texture outputs are less intuitive to interpret visually and highly dependent on chosen parameters (window size and grey level quantisation). Finally, PCA was applied to the stacked spectral and texture layers to reduce redundancy between correlated bands. PCA transforms the data into new components (PC1, PC2, etc.) that capture decreasing proportions of overall variance. While PCA can be useful for dimensionality reduction and classification, the resulting components are abstract combinations of original variables and therefore less directly interpretable than NDVI. Overall, these steps demonstrated how preprocessing choices influence both visual outputs and statistical stability, even if their interpretability is less straightforward than vegetation indices.</p>
+<p>Before focusing on NDVI, I explored several image processing techniques introduced in the practical, including <strong>filtering, texture analysis and Principal Component Analysis (PCA)</strong>. Visually, it might seems like they didn’t improve the image, but it reduces small-scale pixel noise and stabilises local variation. Such reduction is relevant when performing further statistical operations (e.g.&nbsp;texture or PCA), as these methods can otherwise be too sensitive to pixel-to-pixel differences that may come from sensor noise rather than real landscape structure. I then calculated GLCM texture (homogeneity) using a 7×7 window. Instead of looking at color (reflectance), texture looks at how pixels are arranged. High homogeneity means the surface is smooth and consistent, like a large forest or a lake. Low values mean the area is varied and complex, like a busy city.</p>
+<p>Finally, PCA was applied to the stacked spectral and texture layers to reduce redundancy between correlated bands. PCA transforms the data into new components (PC1, PC2, etc.) that capture decreasing proportions of overall variance. While PCA can be useful for dimensionality reduction and classification, the resulting components are abstract combinations of original variables and therefore less directly interpretable than NDVI (again visually not really helpful!). To sum up, these steps demonstrated how preprocessing choices influence visual outputs as well as statistical stability.</p>
 </section>
 <section id="the-normalised-different-vegetation-index-ndvi" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="the-normalised-different-vegetation-index-ndvi"><span class="header-section-number">3.2</span> The Normalised Different Vegetation Index (NDVI)</h2>
@@ -240,7 +267,7 @@ Figure&nbsp;3.1: Side-by-side spatial analysis of vegetation index. Click either
 </div>
 <p>My initial spin on practical content came from genuine interest in comparison of green coverage between London and Warsaw. I started off with purely looking at the visualisation of NDVI for both cities wondering if there are significant differences visible to the naked eye. For both cities I used imagery from May 2024, to minimise differences which might be caused by seasonal variations. The minimum of NDVI value was chosen based on fact that for urban areas NDVI &gt; 0.2 is considered to be threshold for “some” vegetation. Maximum NDVI was set to be 0.6, as for London NDVI &gt; 0.6 is less than 0.001% of the city area, and for Warsaw max NDVI value is 0.58.</p>
 <p>Although some differences are visible, visualisations weren’t very informative. I decided to run very basic descriptive statistics (see Table 3.1), which revealed a bit more about cities greenery. Warsaw had a slightly higher percentage of vegetation cover, while London seems to have higher value for max NDVI (as well as slightly higher mean NDVI) indicating spots of more lush greenery in the city. The vegetation cover of 66% and 64% seemed like very high values, and after cross-checking with literature it turned to be way off. According to <a href="https://www.london.gov.uk/programmes-strategies/environment-and-climate-change/parks-green-spaces-and-biodiversity/green-infrastructure-maps-and-tools?ac-49556=49548">Mayor of London website</a> London green cover is around 51.7%, while Husqvarna Urban Green Space Insights (HUGSI) website shows that <a href="https://hugsi.green/cities/London">London</a> green space is 41%, and <a href="https://hugsi.green/cities/Warsaw">Warsaw</a> 50%.</p>
-<p>This variations might be partially due to differences in definitions of green space (maybe different thresholds or not accounting for private gardens or green roofs) , but mostly due to simplicity of the method I used. Firstly Landsat 8 data has resolution of 30 m, while Sentinel 2 (used in HUGSI analysis) has a resolution of 10-20 m. When using Landsat 8 data we are analysing 900 m² pixels, which can lead to eg. having very small, but very healthy green backyard which can push an average NDVI pixel value to be &gt; 0.2, and therefore count the whole pixel as a vegetation.</p>
+<p>This variations might be partially due to differences in definitions of green space (maybe different thresholds or not accounting for private gardens or green roofs) , but mostly due to simplicity of the method I used. Landsat 8 data has resolution of 30 m, while Sentinel 2 (used in HUGSI analysis) has a resolution of 10-20 m. When using Landsat 8 data we are analysing 900 m² pixels, which can lead to eg. having very small, but very healthy green backyard which can push an average NDVI pixel value to be &gt; 0.2, and therefore count the whole pixel as a vegetation. Pixels which contains a mix of concrete, asphalt, and small garden patches are called “mixed pixel” and can cause a lot of issues in remote sensing. As noted by <span class="citation" data-cites="martinez22">Alex de la Iglesia Martinez (<a href="references.html#ref-martinez22" role="doc-biblioref">2022</a>)</span>, NDVI thresholds can be misleading exactly due to the mixed pixels.</p>
 <div id="tbl-ndvi" class="quarto-float quarto-figure quarto-figure-center anchored" width="100%">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ndvi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -277,8 +304,14 @@ Table&nbsp;3.1: NDVI Comparison: Warsaw vs.&nbsp;London
 </section>
 <section id="reflections" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">3.3</span> Reflections</h2>
+<p>This week I definitely feel I learned a lot, and being able to answer small “research question” I had in my head through looking at NDVI indices was very satisfying. Because of the simplicity of the method I felt like I really understood everything what was happening in the code, and I could make small adjustments in the methods fully knowing what’s going on. I’m also glad I “experienced” the imperfections of this method on my own skin, as it gave me this deeper understanding what could be done differently and why NDVI might not work in many cases. In a future I would love to learn more about methods which would be complementary to this, and e.g.&nbsp;would help resolve the issue of mixed pixels.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-martinez22" class="csl-entry" role="listitem">
+Alex de la Iglesia Martinez, S. M. Labib. 2022. <span>“Demystifying Normalized Difference Vegetation Index (NDVI) for Greenness Exposure Assessments and Policy Interventions in Urban Greening.”</span> <em>Environmental Research</em> 220. <a href="https://doi.org/10.1016/j.envres.2022.115155">https://doi.org/10.1016/j.envres.2022.115155</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -684,13 +717,13 @@ Table&nbsp;3.1: NDVI Comparison: Warsaw vs.&nbsp;London
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week2.html" class="pagination-link" aria-label="Week 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2</span></span>
+      <a href="./week2.html" class="pagination-link" aria-label="Landsat Program">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Landsat Program</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week4_5.html" class="pagination-link" aria-label="Remoet Sensing and Policies- Case Study">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remoet Sensing and Policies- Case Study</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week4_5.html" class="pagination-link" aria-label="Remote Sensing and Policies- Case Study">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remote Sensing and Policies- Case Study</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
